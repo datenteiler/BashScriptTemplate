@@ -44,7 +44,7 @@ Get_version() { # Script Version
 # -- RUN SCRIPT ----------------------------------------------------------------
 
 # Parsing bash script options with getopt
-options=$(getopt -o hvldiu:a -l help,version,latest,download,install,install-user:,appimage -- "$@")
+options=$(getopt -o hv -l help,version -- "$@")
 if [ $? != 0 ] ; then echo "Terminating..." >&2; exit 1; fi
 
 set -- $options
